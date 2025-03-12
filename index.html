@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Candy Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="showcard">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Candy Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <button onclick="toggleCart()" class="card-btn"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count"></span></button>
+                    <li class="nav-item"><a class="nav-link" href="login.html" id="auth-link">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Browse Candies</h2>
+        <input type="text" id="search-bar" class="form-control" placeholder="Search for candies..." >
+        <div class="row mt-3" id="candy-list"></div>
+        <button class="view" type="view">View More..</button>
+    </div>
+    <div class="cart-container" id="cartSidebar">
+        <div class="cardTab">
+            <h2>Shopping Cart</h2>
+            <div id="cart"></div>
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+            <div class="cart-buttons">
+                <button class="close-btn" onclick="toggleCart()">Close</button>
+                <button class="checkout-btn" onclick="saveForLater()">Check Out</button>
+            </div>
+        </div>
+    </div>
+        <div class="details">
+            <h1 class="heading">Craving for a Spicy Kick?Order Chatpati Candy Online Now</h1>
+            <p class="content">- Experience the magic of Indian candy that tantalizes your taste buds with every bite. From the mouthwatering sweetness of jaggery-based treats to the perfect blend of spices and herbs in tangy confections, Indian candies offer a burst of flavors that is truly unmatched. Our Indian candy online store showcases an extensive collection of Indian candies that cater to every craving. Immerse yourself in the iconic taste of delicious and mouth-watering candies likes Masala, Lemon Candy, Pink Guava Candy, Mint Candy, Orange Candy, Paan Candy, Cola Candy, Jelly Cubes, Tini Mini Candy,  Disco Balls,  Lychee Candy,  Rose Peppermint Candy, Mixed Fruit Candy,  Imli Candy, Rainbow Rings, Fruit Ball and so on. With a wide range of options, there's something to suit every palate. Each candy is crafted with love and care, using authentic ingredients and traditional techniques, ensuring an authentic and high-quality taste experience that transports you to the vibrant streets of India.</p>
+                <h1 class="heading">Taste the Tangy Delight</h1>
+                <p class="content">- Buy Indian Candy Online From Newtree
+                Whether you're looking to spice up your snack time, add some excitement to a party, or surprise your taste buds with something unique and thrilling, our Chatpati Candy Online is your go-to choice. It's perfect for those who crave a little adventure in their snacks and want to experience a flavor sensation like no other. But wait, there's more! We understand the importance of convenience, which is why we offer candies online, delivering these tantalizing treats straight to your doorstep. No more hunting for these flavoursome candies in stores. With just a few clicks, you can have a collection of Chatpati Candy delivered to your home, ready to be devoured.</p>
+                <h1 class="heading">Spice Up Your Snack Time</h1>
+                <p class="content">– Buy Chatpati Indian Candy Online
+                Embrace the convenience and excitement of buying candy online. Visit our website today and embark on a delightful candy shopping online experience that will satisfy your cravings and bring joy to your taste buds. We offer a range of beautifully packaged candy assortments that make delightful presents for birthdays, holidays, or any special occasion. Spread joy and sweetness to your loved ones with our thoughtfully curated candy gift options. No need to leave your home or office. We'll deliver your candy haul right to your doorstep, ensuring that your treats arrive fresh and ready to be enjoyed.</p>
+        </div>
+        <script>
+            function toggleCart() {
+                let cartSidebar = document.getElementById("cartSidebar");
+                cartSidebar.classList.toggle("active");
+            }
+            
+            function saveForLater() {
+                alert("Your items have been saved for later checkout!");
+            }
+        </script>
+</body>
+</html>
